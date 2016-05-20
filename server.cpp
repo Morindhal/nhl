@@ -44,17 +44,11 @@ void Server::processTextMessage(QString message)
     QWebSocket *pClient = qobject_cast<QWebSocket *>(sender());
     QSqlQuery query("SELECT players.first_name, players.last_name, players.date_of_birth FROM players LIMIT 0,10" , db.myDatabase);
 /*
- * Pseudo code (backend):
- * parse query into a JSon object
- * send JSon object
  * Pseudo code (frontend):
  * recieve JSon object
  * present JSon object to the user
  *
  * TODO:
- * Project:
- * Push what is done into a repository, make a new one since the PHP-backend is not seperated enough
- * to reuse the frontend.
  *
  * Frontend:
  * Get a input more usable than a string,

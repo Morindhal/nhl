@@ -7,7 +7,7 @@ DatabaseManager::DatabaseManager()
     myDatabase.setHostName("localhost");
     myDatabase.setDatabaseName("nhl");
     myDatabase.setUserName("root");
-    myDatabase.setPassword("everlasting2");
+    myDatabase.setPassword("PASSWORD");
     myDatabase.setPort(3306);
     bool open = myDatabase.open();
     if(open)
