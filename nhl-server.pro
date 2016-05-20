@@ -5,6 +5,11 @@
 #-------------------------------------------------
 
 QT       += core gui
+CONFIG += console
+QT += core websockets
+QT += sql
+QT += webkit webkitwidgets
+
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -13,8 +18,12 @@ TEMPLATE = app
 
 
 SOURCES += main.cpp\
-        serverwindow.cpp
+        serverwindow.cpp \
+    server.cpp \
+    databasemanager.cpp
 
-HEADERS  += serverwindow.h
+HEADERS  += serverwindow.h \
+    server.h \
+    databasemanager.h
 
 FORMS    += serverwindow.ui
